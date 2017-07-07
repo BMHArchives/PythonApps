@@ -1,0 +1,7 @@
+'''
+Created on Jul 6, 2017
+
+@author: Brandon
+'''
+print("Welcome to Tic Tac Toe Game")
+print("_ _1 _ _| _ _2 _ _ | _ _3 _ _\n_ _4 _ _| _ _5 _ _ | _ _6 _ _\n_ _7 _ _| _ _8 _ _ | _ _9 _ _\n        |          |        ")

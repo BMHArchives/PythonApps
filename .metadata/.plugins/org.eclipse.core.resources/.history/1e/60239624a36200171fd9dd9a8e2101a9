@@ -1,0 +1,25 @@
+'''
+Created on Jul 6, 2017
+
+@author: Brandon
+'''
+print("Welcome to Tic Tac Toe Game")
+p1Name = ""
+p2Name = ""
+PlayerMoves = {}
+WhosTurn = ""
+def ShowBoard(PlayerMove,Player):
+    if(PlayerMove == 0):
+        print("_ _1 _ _| _ _2 _ _ | _ _3 _ _\n_ _4 _ _| _ _5 _ _ | _ _6 _ _\n_ _7 _ _| _ _8 _ _ | _ _9 _ _")
+    
+
+print("This is a two player game.") 
+print("Based use the numbers on the board to set your tic or tac values onto the board.")
+p1Name = input("Player 1, please enter your name")
+p2Name = input("Player 2, please enter your name")
+
+print('Welcome {}, you are playing as player 1 and will be using X has you player piece.'.format(p1Name))
+print('Welcome {}, you are playing as player 2 and will be using O has you player piece.'.format(p2Name))
+
+ShowBoard(0,"")
+p1Move = input("{}, you go first. Peace choose a position to set your X piece on.".format(p1Name))

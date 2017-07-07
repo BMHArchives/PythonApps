@@ -1,0 +1,78 @@
+'''
+Created on Jul 6, 2017
+
+@author: Brandon
+'''
+print("Welcome to Tic Tac Toe Game")
+p1Name = ""
+p2Name = ""
+PlayerMoves = {}
+WhosTurn = ""
+def ShowBoard(PlayerMove,Player,CurrentTurn):
+    PlayerPiece = ""
+    if (Player == "P1"):
+        PlayerPiece = "X"
+    else:
+        PlayerPiece = "O"
+        
+    P1 = "1"
+    P2 = "2"
+    P3 = "3"
+    P4 = "4"
+    P5 = "5"
+    P6 = "6"
+    P7 = "7"
+    P8 = "8"
+    P9 = "9" 
+    if(PlayerMove == 0):
+        print("_ _{} _ _| _ _{} _ _ | _ _{} _ _\n_ _{} _ _| _ _{} _ _ | _ _{} _ _\n_ _{} _ _| _ _{} _ _ | _ _{} _ _".format(P1,P2,P3,P4,P5,P6,P7,P8,P9));
+    else:
+        ''' Loop through the PlayersMoves list '''
+        PlayerMoves[CurrentTurn] = PlayerMove
+        print(PlayerMoves)
+        
+           
+        for PlayerMove in PlayerMoves:
+            print("PlayerMove {}".format(PlayerMove[1]))
+            if(PlayerMove[1] == 1):
+                P1 = PlayerPiece
+            if(PlayerMove[1] == 2):
+                P2 = PlayerPiece
+            if(PlayerMove[1] == 3):
+                P3 = PlayerPiece
+            if(PlayerMove[1] == 4):
+                P4 = PlayerPiece
+            if(PlayerMove[1] == 5):
+                P5 = PlayerPiece
+            if(PlayerMove[1] == 6):
+                P6 = PlayerPiece
+            if(PlayerMove[1] == 7):
+                P7 = PlayerPiece
+            if(PlayerMove[1] == 8):
+                P8 = PlayerPiece
+            if(PlayerMove[1] == 9):
+                P9 = PlayerPiece
+                
+        print("_ _{} _ _| _ _{} _ _ | _ _{} _ _\n_ _{} _ _| _ _{} _ _ | _ _{} _ _\n_ _{} _ _| _ _{} _ _ | _ _{} _ _".format(P1,P2,P3,P4,P5,P6,P7,P8,P9));       
+
+print("This is a two player game.") 
+print("Based use the numbers on the board to set your tic or tac values onto the board.")
+p1Name = input("Player 1, please enter your name")
+p2Name = input("Player 2, please enter your name")
+
+print('Welcome {}, you are playing as player 1 and will be using X has you player piece.'.format(p1Name))
+print('Welcome {}, you are playing as player 2 and will be using O has you player piece.'.format(p2Name))
+
+PlayerTurn = "P1"
+ShowBoard(0,"",0)
+for num in range(8):
+    
+    if (PlayerTurn == "P1"):
+        p1Move = input("{}, you go first. Peace choose a position to set your X piece on.".format(p1Name))
+        ShowBoard(p1Move,"P1",num)
+        PlayerTurn = "P2"
+    else:
+        p2Move = input("{}, you go first. Peace choose a position to set your X piece on.".format(p2Name))
+        ShowBoard(p2Move,"P2",num)
+        PlayerTurn = "P1"
+
